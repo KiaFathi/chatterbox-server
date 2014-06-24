@@ -6,7 +6,7 @@ var hReq = require('./server/request-handler.js');
 // var app = express();
 // app.use(express.static('./client/index.html'));
 
-app.listen(process.env.PORT || 3000);
+// app.listen(process.env.PORT || 3000);
 
 /* Every server needs to listen on a port with a unique number. The
  * standard port for HTTP servers is port 80, but that port is
