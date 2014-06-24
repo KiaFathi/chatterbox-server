@@ -44,7 +44,7 @@ var app = {
       app.fetch();
     }, 5000);
   },
-  server: 'http://127.0.0.1:3000/classes/1',
+  server: 'http://127.0.0.1:1337/classes/1',
   handleSubmit: function(text, username, room){
     if(room = 'all'){
       room = '';
