@@ -1,10 +1,10 @@
 /* Import node's http module: */
 var http = require("http");
 var hReq = require('./server/request-handler.js');
-var express = require("express");
+// var express = require("express");
 
-var app = express();
-app.use(express.static('./client/index.html'));
+// var app = express();
+// app.use(express.static('./client/index.html'));
 
 app.listen(process.env.PORT || 3000);
 
