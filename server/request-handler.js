@@ -33,7 +33,7 @@ module.exports.handler = function(request, response) {
   
 
   // var fileLoc = pathReq.join(process.cwd(), request.url);
-  // var headers = defaultCorsHeaders;
+  var headers = defaultCorsHeaders;
   // var root = urlMod.parse(request.url).pathname
 
 
