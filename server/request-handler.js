@@ -28,7 +28,7 @@ module.exports.handler = function(request, response) {
    * below about CORS. */
   var headers = defaultCorsHeaders;
 
-  if(request.method === "GET" && request.url === '/')
+  // if(request.method === "GET" && request.url === '/')
 
 
   if ((request.method === "POST") && (path[1] === 'classes')) {
