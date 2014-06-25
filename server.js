@@ -2,6 +2,7 @@
 var http = require("http");
 var hReq = require('./server/request-handler.js');
 var fs = require('fs');
+var path = require('path');
 
 /* Every server needs to listen on a port with a unique number. The
  * standard port for HTTP servers is port 80, but that port is
