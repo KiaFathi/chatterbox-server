@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 /* You should implement your request handler function in this file.
  * And hey! This is already getting passed to http.createServer()
  * in basic-server.js. But it won't work as is.
@@ -44,6 +46,9 @@ module.exports.handler = function(request, response) {
       parsedData.createdAt = Date.now();
       responseMsg.results.unshift(parsedData);
       response.writeHead(statusCode, headers);
+      fs.appendFile('./../data.json', 'TEST', function(err){
+        err ? console.log('ERRORROROROROR') : console.log("Success");
+      });
       response.end(JSON.stringify(parsedData));
     });
   } else if (request.method === "GET" && path[1] === 'classes') {
