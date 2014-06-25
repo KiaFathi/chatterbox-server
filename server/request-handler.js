@@ -33,14 +33,15 @@ module.exports.handler = function(request, response) {
   if(request.method === "GET" && request.url === '/'){
     fs.readFile('./client/index.html', function(err, html){
       if (err){
-      throw "Could not read file";
-    } else{
-      response.writeHeader(200, {"Content-Type": "text/html"});
-      response.write(html);
-      response.end();
-    }
+        throw "Could not read file";
+      } 
+      else{
+        response.writeHeader(200, {"Content-Type": "text/html"});
+        response.write(html);
+        response.end();
+      }
+    })
   }
-
 
   if ((request.method === "POST") && (path[1] === 'classes')) {
     console.log('Handling POST request...');
