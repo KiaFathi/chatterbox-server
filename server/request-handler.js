@@ -1,5 +1,5 @@
 var fs = require('fs');
-var pathReq = require('path');
+// var pathReq = require('path');
 // var urlMod = require('url');
 
 /* You should implement your request handler function in this file.
