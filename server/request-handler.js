@@ -1,5 +1,6 @@
 var fs = require('fs');
-var path = require('path');
+var pathReq = require('path');
+var urlMod = require('url');
 
 /* You should implement your request handler function in this file.
  * And hey! This is already getting passed to http.createServer()
@@ -29,9 +30,16 @@ module.exports.handler = function(request, response) {
 
   /* Without this line, this server wouldn't work. See the note
    * below about CORS. */
-  var headers = defaultCorsHeaders;
+  
 
-  if(request.method === "GET" && request.url === path.process.cwd()){
+  var fileLoc = pathReq.join(process.cwd(), request.url);
+  var headers = defaultCorsHeaders;
+  var root = urlMod.parse(request.url).pathname
+
+  if(urlMod.parse(request.url, pathname) === '/')
+
+
+  if(request.method === "GET" && root = '/'){
     fs.readFile('./client/index.html', function(err, html){
       if (err){
         throw "Could not read file";
