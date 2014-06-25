@@ -14,17 +14,17 @@ var port = process.env.port || 1337;
  * special address that always refers to localhost. */
 var ip = "127.0.0.1";
 
-fs.readFile('./client/index.html', function(err, html){
-  if (err){
-    throw err;
-  }
-  var HTMLserver = http.createServer(function(request, response){
-    response.writeHeader(200, {"Content-Type": "text/html"});
-    response.write(html);
-    response.end();
+// fs.readFile('./client/index.html', function(err, html){
+//   if (err){
+//     throw err;
+//   }
+//   var HTMLserver = http.createServer(function(request, response){
+//     response.writeHeader(200, {"Content-Type": "text/html"});
+//     response.write(html);
+//     response.end();
 
-  }).listen(port);
-});
+//   }).listen(port);
+// });
 
 /* We use node's http module to create a server. Note, we called it 'server', but
 we could have called it anything (myServer, blahblah, etc.). The function we pass it (handleRequest)
