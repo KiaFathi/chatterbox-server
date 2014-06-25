@@ -1,6 +1,6 @@
 var fs = require('fs');
 var pathReq = require('path');
-var urlMod = require('url');
+// var urlMod = require('url');
 
 /* You should implement your request handler function in this file.
  * And hey! This is already getting passed to http.createServer()
