@@ -32,23 +32,23 @@ module.exports.handler = function(request, response) {
    * below about CORS. */
   
 
-  var fileLoc = pathReq.join(process.cwd(), request.url);
-  var headers = defaultCorsHeaders;
-  var root = urlMod.parse(request.url).pathname
+  // var fileLoc = pathReq.join(process.cwd(), request.url);
+  // var headers = defaultCorsHeaders;
+  // var root = urlMod.parse(request.url).pathname
 
 
-  if(request.method === "GET" && root = '/'){
-    fs.readFile('./client/index.html', function(err, html){
-      if (err){
-        throw "Could not read file";
-      } 
-      else{
-        response.writeHeader(200, {"Content-Type": "text/html"});
-        response.write(html);
-        response.end();
-      }
-    })
-  }
+  // if(request.method === "GET" && root = '/'){
+  //   fs.readFile('./client/index.html', function(err, html){
+  //     if (err){
+  //       throw "Could not read file";
+  //     } 
+  //     else{
+  //       response.writeHeader(200, {"Content-Type": "text/html"});
+  //       response.write(html);
+  //       response.end();
+  //     }
+  //   })
+  // }
 
   if ((request.method === "POST") && (path[1] === 'classes')) {
     console.log('Handling POST request...');
