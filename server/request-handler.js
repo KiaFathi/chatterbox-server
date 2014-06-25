@@ -12,6 +12,7 @@ module.exports.handler = function(request, response) {
   console.log("type: " + request.type);
   console.log("method: " + request.method);
   var url = request.url;
+  console.log(url);
   var uri = request.uri;
   var path = url.split('/') || uri.split('/');
 
@@ -26,6 +27,8 @@ module.exports.handler = function(request, response) {
   /* Without this line, this server wouldn't work. See the note
    * below about CORS. */
   var headers = defaultCorsHeaders;
+
+  if(request.method === "GET" && request.url === '/')
 
 
   if ((request.method === "POST") && (path[1] === 'classes')) {
