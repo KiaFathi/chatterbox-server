@@ -36,8 +36,6 @@ module.exports.handler = function(request, response) {
   var headers = defaultCorsHeaders;
   var root = urlMod.parse(request.url).pathname
 
-  if(urlMod.parse(request.url, pathname) === '/')
-
 
   if(request.method === "GET" && root = '/'){
     fs.readFile('./client/index.html', function(err, html){
