@@ -30,7 +30,7 @@ module.exports.handler = function(request, response) {
    * below about CORS. */
   var headers = defaultCorsHeaders;
 
-  if(request.method === "GET" && url === '/'){
+  if(request.method === "GET" && request.url === '/'){
     fs.readFile('./client/index.html', function(err, html){
       if (err){
       throw "Could not read file";
